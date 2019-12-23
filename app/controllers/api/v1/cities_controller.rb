@@ -2,9 +2,15 @@ module Api
   module V1
     class CitiesController < ApplicationController
       def index
+        binding.pry
+        @cities = City.all
+        render json: @cities
+      end
+      def show
+        binding.pry
+
       end
       def create
-        city = City.create(city_params)
       end
       def destroy
       end
