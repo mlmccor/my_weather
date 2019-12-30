@@ -7,10 +7,10 @@ module Api
         render json: @cities
       end
       def show
-        binding.pry
-
       end
       def create
+        @city = City.find_or_create_by(city_params)
+        render json: @city
       end
       def destroy
       end
